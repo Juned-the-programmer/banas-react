@@ -1,0 +1,42 @@
+.login_page {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login_page .wrapper {
+    height: 70vh;
+    width: 30%;
+}
+
+.wrapper h1 {
+    font-family: sans-serif !important;
+}
+
+.input_box {
+    border-top: none;
+    border-right: none;
+    border-left: none;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: green;
+    border-width: 2px;
+  }
+
+  @media (max-width: 1000px) {
+    .login_page .wrapper {
+        height: 70vh;
+        width: 60%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .login_page .wrapper {
+        height: 70vh;
+        width: 80%;
+    }
+  }

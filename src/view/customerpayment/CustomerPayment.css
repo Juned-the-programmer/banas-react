@@ -1,0 +1,11 @@
+.input_box {
+    border-top: none;
+    border-right: none;
+    border-left: none;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: green;
+    border-width: 2px;
+  }
