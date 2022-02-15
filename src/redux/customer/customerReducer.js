@@ -4,7 +4,8 @@ export const customerFeatureKey = 'customerInfo';
 
 const initialState = {
     loading: false,
-    errMessage: ""
+    customers: [],
+    errMessage: "",
 };
 
 export const reducer = (state = initialState, action) => {
@@ -28,7 +29,28 @@ export const reducer = (state = initialState, action) => {
                 loading: false,
                 errMessage: payload.message
             }
+        //GET THE CUSTOMERS DATA
+        case customerActions.GET_CUSTOMERS_REQUEST:
+            return {
+                ...state,
+                loading: true,
+            }
 
+        case customerActions.GET_CUSTOMERS_SUCCESS:
+            return {
+                ...state,
+                loading: false,
+                customers: payload
+            }
+
+        case customerActions.GET_CUSTOMERS_FAILURE:
+            return {
+                ...state,
+                loading: false,
+                customers: [],
+                errMessage: payload.message
+            }
+            
         default: return state;
     };
 };

@@ -7,6 +7,7 @@ import AddCustomer from './view/addCutomer/AddCustomer';
 import AddRoute from './view/addroute/Addroute';
 import CustomerAccount from './view/customeraccount/CustomerAccount';
 import DailyEntry from './view/dailyentry/DailyEntry';
+import ListCustomers from './view/listcustomers/ListCustomers';
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
           <Route exact path="/add/route" component={AddRoute} />
           <Route exact path="/add/customeraccount" component={CustomerAccount} />
           <Route exact path="/add/dailyentry" component={DailyEntry} />
+          <Route exact path="/list/customers" component={ListCustomers} />
         </Switch>
       </Router>
     </React.Fragment>
