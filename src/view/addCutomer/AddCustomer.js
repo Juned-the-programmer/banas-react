@@ -11,7 +11,8 @@ const AddCustomer = () => {
     const [customer, setCustomer] = useState({
         name: "",
         route: "",
-        rate: 25
+        rate: 25,
+        due : 0
     });
     const dispatch = useDispatch();
 
@@ -58,7 +59,10 @@ const AddCustomer = () => {
                               </Input>
                             </FormGroup>
                             <FormGroup>
-                              <Input type="number" required className="input_box" placeholder="Rate" defaultValue={customer?.rate} onChange={e => setCustomer({...customer, rate: e.target.value})} />
+                              <Input type="number" required className="input_box" placeholder="Enter the Rate" defaultValue={customer?.rate} onChange={e => setCustomer({...customer, rate: e.target.value})} />
+                            </FormGroup>
+                            <FormGroup>
+                              <Input type="number" required className="input_box" placeholder="Enter the Due Amount" defaultValue={customer?.due} onChange={e => setCustomer({...customer, due: e.target.value})} />
                             </FormGroup>
                             <FormGroup>
                                 <Input type="submit" value="Add Customer" className="btn btn-success"/>
